@@ -48,7 +48,7 @@ function over(){
   if(s>best){best=s;try{localStorage.setItem('zippy-best',best)}catch(e){}}
   t.textContent='Perdu !';
   m.innerHTML='Score : '+s+'<br>Record : '+best;
-  b1.textContent='Rejouer';b2.hidden=used;ov.hidden=false;
+  b1.textContent='Rejouer';b2.hidden=true;ov.hidden=false;
 }
 b1.onclick=e=>{e.stopPropagation();init()};
 b2.onclick=e=>{e.stopPropagation();used=true;obs=obs.filter(o=>o.x>p.x0+260||o.x+o.w<p.x0);p.y=G-S;p.v=0;p.j=0;state='play';ov.hidden=true};
